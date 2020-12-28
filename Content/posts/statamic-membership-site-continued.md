@@ -1,6 +1,7 @@
 ---
 date: 2018-03-23 00:00
 description: I go into more detail on the ways you can protect content and restrict access on a Statamic site.
+tags: statamic
 ---
 
 # Private content with Statamic

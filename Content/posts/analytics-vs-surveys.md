@@ -1,6 +1,7 @@
 ---
 date: 2018-03-16 00:00
 description: User surveys are one of the most valuable things you can start doing if you struggle to make sense of your analytics data.
+tags: analytics
 ---
 # Analytics vs. User Surveys
 

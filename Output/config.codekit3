@@ -17,6 +17,163 @@
 		"oAP": "/feed.rss",
 		"oF": 0
 		},
+	"/fonts/wetzlar.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/wetzlar.woff",
+		"oF": 0
+		},
+	"/fonts/wetzlar.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/fonts/wetzlar.woff2",
+		"oF": 0
+		},
+	"/images/hljs.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/images/hljs-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/images/hljs.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/images/hljs-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/images/logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/images/membership-site/charge_dashboard.png": {
+		"ft": 32768,
+		"iS": 69349,
+		"oA": 0,
+		"oAP": "/images/membership-site/charge_dashboard.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/membership-site/charge_role.png": {
+		"ft": 32768,
+		"iS": 27715,
+		"oA": 0,
+		"oAP": "/images/membership-site/charge_role.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/membership-site/content.png": {
+		"ft": 32768,
+		"iS": 12540,
+		"oA": 0,
+		"oAP": "/images/membership-site/content.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/membership-site/create_role.png": {
+		"ft": 32768,
+		"iS": 45480,
+		"oA": 0,
+		"oAP": "/images/membership-site/create_role.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/membership-site/stripe-plan-roles.png": {
+		"ft": 32768,
+		"iS": 144024,
+		"oA": 0,
+		"oAP": "/images/membership-site/stripe-plan-roles.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/membership-site/stripe_role_creation.png": {
+		"ft": 32768,
+		"iS": 33728,
+		"oA": 0,
+		"oAP": "/images/membership-site/stripe_role_creation.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/membership-site/stripe_sub_plan_config.png": {
+		"ft": 32768,
+		"iS": 55164,
+		"oA": 0,
+		"oAP": "/images/membership-site/stripe_sub_plan_config.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/membership-site/stripe_test_data.png": {
+		"ft": 32768,
+		"iS": 7488,
+		"oA": 0,
+		"oAP": "/images/membership-site/stripe_test_data.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/membership-site/webhook.png": {
+		"ft": 32768,
+		"iS": 46106,
+		"oA": 0,
+		"oAP": "/images/membership-site/webhook.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/phoenix.png": {
+		"ft": 32768,
+		"iS": 13900,
+		"oA": 0,
+		"oAP": "/images/phoenix.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/index.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -24,16 +181,6 @@
 		"oA": 0,
 		"oAP": "/index.html",
 		"oF": 0
-		},
-	"/JamieDumont/styles.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/JamieDumont/styles-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/posts/1-percent-better/index.html": {
 		"cB": 0,
@@ -156,6 +303,30 @@
 		"oAP": "/styles-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/tags/analytics/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tags/analytics/index.html",
+		"oF": 0
+		},
+	"/tags/apps/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tags/apps/index.html",
+		"oF": 0
+		},
+	"/tags/css/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tags/css/index.html",
+		"oF": 0
 		},
 	"/tags/index.html": {
 		"cB": 0,

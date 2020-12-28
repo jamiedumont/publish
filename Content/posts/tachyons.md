@@ -1,6 +1,7 @@
 ---
 date: 2016-12-02 00:00
 description: Using functional, single-purpose CSS classes to drastically reduce CSS complexity and update woes.
+tags: css
 ---
 
 # Discovering Tachyons

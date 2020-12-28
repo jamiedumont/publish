@@ -6,6 +6,7 @@
     --color-light: #fff;
     --color-dark: #333;
     --color-accent: #DFB212;
+    --color-accent-darker: #DFB212;
     
     --border-thin: 1px silver;
     --border-thick 2px solid silver;
@@ -55,8 +56,9 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-family: -apple-system, sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -152,20 +154,50 @@ p {
     margin-bottom: var(--s1);
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent-darker);
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: calc(var(--s1) / 2);
 }
 
 blockquote {
     font-style: italic;
-    border-left: var(--border-thick);
+    border-left: 2px solid silver;
     padding-left: calc(var(--s1) / 2);
+}
+
+pre {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: var(--s1);
+    overflow-x: scroll;
+}
+
+code {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: .1rem .35rem;
+    display: inline-block;
 }
 
 
 
 
 /* COMPONENTS */
+
+.item-list li {
+    margin-bottom: var(--s1);
+}
+
+.item-list li p {
+    margin-bottom: calc(var(--s1) / 2);
+}
 
 .tag-list {
     list-style: none;
@@ -177,7 +209,7 @@ blockquote {
 .tag-list li {
    display: block;
    background-color: var(--color-accent);
-   color: var(--color-dark);
+   color: var(--color-light);
    padding: .25rem .35rem;
    border-radius: .25rem;
    margin: .35rem;
@@ -185,7 +217,10 @@ blockquote {
 }
 
 .tag-list a {
-    color: var(--color-dark);
+    color: var(--color-light);
     font-size: .65rem;
     text-decoration: none;
+    display: block;
 }
+
+

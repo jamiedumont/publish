@@ -12,8 +12,7 @@ public extension Theme {
     /// basic theme mostly implemented for demonstration purposes.
     static var jamiedumont: Self {
         Theme(
-            htmlFactory: JamieDumontHTMLFactory(),
-            resourcePaths: ["Resources/JamieDumont/styles.css"]
+            htmlFactory: JamieDumontHTMLFactory()
         )
     }
 }
@@ -182,7 +181,7 @@ private extension Node where Context == HTML.BodyContext {
 
         return .header(
             .div(
-                .a(.class("site-name"), .href("/"), .text(context.site.name)),
+//                .a(.class("site-name"), .href("/"), .text(context.site.name)),
                 .if(sectionIDs.count > 1,
                     .nav(
                         .ul(.forEach(sectionIDs) { section in
@@ -231,13 +230,13 @@ private extension Node where Context == HTML.BodyContext {
 
     static func footer<T: Website>(for site: T) -> Node {
         return .footer(
-            .p(
-                .text("Generated using "),
-                .a(
-                    .text("Publish"),
-                    .href("https://github.com/johnsundell/publish")
-                )
-            ),
+//            .p(
+//                .text("Generated using "),
+//                .a(
+//                    .text("Publish"),
+//                    .href("https://github.com/johnsundell/publish")
+//                )
+//            ),
             .p(.a(
                 .text("RSS feed"),
                 .href("/feed.rss")

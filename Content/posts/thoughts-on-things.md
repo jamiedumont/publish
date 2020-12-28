@@ -1,6 +1,7 @@
 ---
 date: 2017-05-20 00:00
 description: Cultured Code just released Things 3, and it got me thinking about app pricing, and how we could be doing so much better.
+tags: apps
 
 ---
 

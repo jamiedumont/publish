@@ -1,6 +1,7 @@
 ---
 date: 2017-10-05 00:00
 description: I questioned how this site — along with many others — benefits from having Google Analytics installed to track user behaviour.
+tags: analytics
 ---
 
 # Does using Google Analytics make sense for your site?
