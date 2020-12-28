@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="og:site_name" content="Jamie Dumont"/><link rel="canonical" href="https://jamiedumont.co.uk/posts/tachyons"/><meta name="twitter:url" content="https://jamiedumont.co.uk/posts/tachyons"/><meta name="og:url" content="https://jamiedumont.co.uk/posts/tachyons"/><title>Discovering Tachyons | Jamie Dumont</title><meta name="twitter:title" content="Discovering Tachyons | Jamie Dumont"/><meta name="og:title" content="Discovering Tachyons | Jamie Dumont"/><meta name="description" content="Using functional, single-purpose CSS classes to drastically reduce CSS complexity and update woes."/><meta name="twitter:description" content="Using functional, single-purpose CSS classes to drastically reduce CSS complexity and update woes."/><meta name="og:description" content="Using functional, single-purpose CSS classes to drastically reduce CSS complexity and update woes."/><meta name="twitter:card" content="summary"/><link rel="stylesheet" href="/styles.css" type="text/css"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="shortcut icon" href="/images/favicon.png" type="image/png"/><link rel="alternate" href="/feed.rss" type="application/rss+xml" title="Subscribe to Jamie Dumont"/></head><body><div class="centre"><header><div><a class="site-name" href="/">Jamie Dumont</a></div></header><div><article><div><h1>Discovering Tachyons</h1><p>I’ve been using a CSS framework called Tachyons for the past 9 months, and I think I’ve fallen…hard.</p><p>Back when I started this game, I think I built precisely one website using a “framework” before deciding it was all a load of bollocks. I bloated out the codebase with loads of styling I never used, and then worsened it by spending too much time over-riding all these styles.</p><p>I promptly threw the site in the bin, and started again…from scratch, writing all the CSS myself. Lesson learnt.</p><h2>ITCSS</h2><p>It wasn’t long before I stumbled upon the benefits of SCSS and Harry Robert’s wonderful site; <a href="http://csswizardry.com">CSS Wizardry</a>. If you are a developer, and haven’t encountered Harry and his work before, I thoroughly recommend setting aside some time and reading through his articles. You’ll learn a lot!</p><p>This discovery led me to slowly formulate my own SCSS framework loosely based on Harry’s ITCSS principle. It had a bunch of sensible defaults, utilities and basic components, although at a much lower fidelity than something like Bootstrap or Foundation.</p><p>The framework became my de-facto starting point for every project, and saved me a good chunk of time. The other upshot was that it gave me a consistent environment between projects, meaning that code could <em>largely</em> be shared between projects, albeit with the occasional irritating bugs.</p><h2>Where I had problems…</h2><p>My only gripes with it were that my “build efficiency” seemed to suffer. There was a lot of friction in my workflow, just because the ITCSS structure and BEM naming methods had me jumping between lots of different files. My homegrown framework had created a weird love-triangle between my HTML, SCSS and the browser.</p><p>All of this was worth it right? Having a well documented, structured and consistent codebase would be worth this extra initial friction. What I lost in the actual <em>writing</em> of my code, I’d make up for with easier, and faster comprehension when I came to make some updates 6, 12 or 18 months down the line.</p><p>Unfortunately, I didn’t find that to be the case. When I came back to a project and encountered some code like this; I was stumped.</p><pre><code class="language-html">&lt;header class="header header--primary"&gt;
+  &lt;ul class="header__nav"&gt;
+      &lt;li class="nav__item nav__item--current"&gt;
+      &lt;li class="nav__item"&gt;
+  &lt;/ul&gt;
+&lt;/header&gt;
+</code></pre><p>I first had to open up my browser to get a feel again for how the modifier classes - <code>header—-primary</code> - overrode the base classes, and what sort of CSS I was using underneath - <code>float?</code> <code>flex?</code> Not a clue from this markup!</p><p>To ensure that I adhered to <a href="https://en.bem.info/methodology/css/#openclosed-principle">BEM’s open/closed principle</a>, and didn’t pollute my codebase with repetitive code, I felt like I had to spend too much time getting to know my own code again before making any changes.</p><h2>Along came Tachyons</h2><p>Like so many discoveries on the web, I can’t remember how I ended up at the <a href="http://tachyons.io">Tachyons website</a>. I had a quick flick through the <a href="http://tachyons.io/docs/">docs</a> and read some of the <a href="http://tachyons.io/#testimonials">glowing testimonials</a> and was intrigued.</p><p>Stupidly, I didn’t actually try it. I concluded that it was good for rapid prototyping and designing, but certainly couldn’t replace my robust SCSS framework. I went back to <code>Alt-tabbing</code> through my workflow, and didn’t think any more of it…until I stumbled upon this <a href="http://mrmrs.io/writing/2016/03/24/scalable-css/">wonderful article</a> by Tachyon’s creator; Adam Morse.</p><p>Everything he said made complete sense to me. Tachyons was the result of his discoveries and made the concept of a “single-purpose class” tangible. I also read some of his other articles and realised that he and I hold the same values <em>(upholding the web’s integrity, the user’s experience is the priority, etc)</em> and decided I needed to have a crack at Tachyons.</p><p>I started slowly, and tentatively. I dropped the CDN hosted stylesheet into a project I was working on and just started using the odd class here and there as a quick extension to my SCSS framework. Just simple classes like <code>tc</code> to centre-align the text, or <code>pa2</code> to add some padding all the way around an element.</p><p>I quickly realised the value of the single-purpose classes, and how they could quickly be composed to form complex, yet simple to understand layouts. As I was building the front-end with React, I appreciated being able to stay in one file, and at a glance see how a reusable component would be styled in any environment. More and more Tachyons classes were used, and soon I was actively replacing my BEM classes with Tachyons.</p><p>It wasn’t long before my co-worker asked me</p><blockquote><p>“What are these funny little classes?”</p></blockquote><p>Tachyons had been my little experiment. I had never intended it to become a part of the codebase. I explained the concept, the upsides, what I thought of it so far, and pointed him to the docs.</p><p>The next day, after he’d had a chance to play with Tachyons himself, we sat down and made the decision to make it part of the new site. We agreed that we’d write no new classes where Tachyons could work, and replace old BEM classes whenever we encountered them.</p><h2>But…maintenance!</h2><p>That was many months ago, and I’m happy to report that Tachyons is still the best decision we made for this project; a ground-up rebuild of <a href="https://www.bikesoup.com">Bikesoup</a>. We’ve yet to remove all traces of the SCSS framework, I’m confident that there’s still lots we can trim!</p><p>This project was a big one too! As lead developer, I felt a huge amount of pressure to “get it right”, particularly having chosen such an unconventional option. <a href="https://www.quora.com/What-does-the-phrase-Nobody-ever-got-fired-for-choosing-IBM-mean">'Nobody ever got fired for choosing <strike>IBM</strike> Bootstrap, right?</a></p><p>The benefits we’ve found go beyond the considerably smaller, tighter CSS file we’re loading to users. Being able to open up someone else’s markup and have it tell the whole story, in one file can’t be underestimated.</p><p>Tachyons has also acted as the most effective style-guide I’ve ever encountered! By carefully reviewing how Tachyons gets extended and altered to fit our needs (colour variables, additional classes), I can open up markup that I’ve never seen before and understand it like I wrote it myself 10 minutes ago!</p><p>Just as functional Javascript - and functional languages at large - have proven there are great benefits to having knowable, purposeful and isolated code; Tachyons has shown that the same concept works just as well - if not better - for CSS.</p><h2>React/Tachyons example</h2><p>React and Tachyons are particularly good bed partners, so I thought I’d show you an example of how I’m using it. Below is the source code for a simple, yet reusable button component.</p><pre><code class="language-javascript">class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this._goRoute = this._goRoute.bind(this);
+  }
+
+  _goRoute() {
+    if (this.props.href) {
+      return FlowRouter.go(this.props.href);
+    }
+    if (this.props.type === 'submit') {
+      return null;
+    }
+    console.warn(
+      "If a button is not the 'submit' for a form, you should specify either an onClick() or and href target"
+    );
+    return null;
+  }
+
+  render() {
+    const small = 'f6 ph2 pv1';
+    const regular = 'f5 ph3 pv2';
+    const large = 'f4 ph4 pv3';
+
+    const noWidth = 'dib';
+    const fullWidth = 'w-100 db';
+
+    const noRadius = 'br0';
+    const stdRadius = 'br2';
+
+    const notDisabled = 'pointer';
+    const disabled = 'disabled bg-light-gray white b--light-gray';
+
+    const buttedLeft = 'br--right';
+    const buttedRight = 'br--left';
+
+    const primary = 'bg-primary white b--primary';
+    const secondary = 'bg-secondary white b--secondary';
+    const danger = 'bg-red white b--red';
+    const ghost = 'bg-transparent primary b--primary';
+    const ghostSecondary = 'bg-transparent secondary b--secondary';
+    const white = 'bg-white secondary b--white';
+
+    const buttonClasses = classNames(
+      'tc', 'link', 'outline-0', 'ba', {
+        [small]: this.props.size === 'sml',
+        [regular]: this.props.size === undefined,
+        [large]: this.props.size === 'lrg',
+
+        [noWidth]: this.props.width === undefined,
+        [fullWidth]: this.props.width === 'full',
+
+        [noRadius]: this.props.radius === 'none',
+        [stdRadius]: this.props.radius === 'standard',
+
+        [notDisabled]: this.props.disabled === false,
+        [disabled]: this.props.disabled === true,
+
+        [buttedLeft]: this.props.butted === 'left',
+        [buttedRight]: this.props.butted === 'right',
+
+        [primary]: this.props.btnStyle === 'primary',
+        [secondary]: this.props.btnStyle === 'secondary',
+        [danger]: this.props.btnStyle === 'danger',
+        [ghost]: this.props.btnStyle === 'ghost',
+        [ghostSecondary]: this.props.btnStyle === 'ghost-secondary',
+        [white]: this.props.btnStyle === 'white'
+      }
+    );
+    return (
+      &lt;button
+        onClick={ this.props.onClick || this._goRoute }
+        className={ buttonClasses }
+        type={ this.props.type || 'button' }
+        disabled={ this.props.disabled }
+      &gt;
+        { this.props.label }
+      &lt;/button&gt;
+    );
+  }
+}
+
+Button.propTypes = {
+  label: T.string.isRequired,
+  onClick: T.func,
+  type: T.oneOf(['button', 'reset', 'submit']),
+  disabled: T.bool,
+  btnStyle: T.oneOf([
+    'primary',
+    'secondary',
+    'danger',
+    'ghost',
+    'ghost-secondary','white'
+  ]),
+  size: T.string,
+  href: T.string,
+  width: T.string,
+  butted: T.oneOf(['left', 'right']),
+  radius: T.oneOf(['none', 'standard'])
+};
+
+Button.defaultProps = {
+  btnStyle: 'primary',
+  label: 'Click me',
+  disabled: false,
+  radius: 'standard'
+};
+
+export default Button;
+</code></pre></div><span>Tagged with: </span><ul class="tag-list"></ul></article></div><footer><p>Generated using <a href="https://github.com/johnsundell/publish">Publish</a></p><p><a href="/feed.rss">RSS feed</a></p></footer></div></body></html>

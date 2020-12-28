@@ -8,9 +8,12 @@
     --color-accent: #DFB212;
     
     --border-thin: 1px silver;
+    --border-thick 2px solid silver;
     
-    --measure: 60ch;
+    --measure: 72ch;
 }
+
+
 
 /* CSS RESET */
 
@@ -89,6 +92,7 @@ select {
 }
 
 
+
 /* PRIMATIVES */
 
 /* THE STACK */
@@ -109,6 +113,8 @@ select {
   margin-top: var(--space);
 }
 
+
+
 /* THE BOX */
 
 .box {
@@ -127,6 +133,8 @@ select {
   background-color: var(--color-light);
 }
 
+
+
 /* THE CENTRE */
 
 .centre {
@@ -135,6 +143,26 @@ select {
   margin-right: auto;
   max-width: var(--measure);
 }
+
+
+
+/* HTML ELEMENTS */
+
+p {
+    margin-bottom: var(--s1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: calc(var(--s1) / 2);
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 2px solid silver;
+    padding-left: calc(var(--s1) / 2);
+}
+
+
 
 
 /* COMPONENTS */

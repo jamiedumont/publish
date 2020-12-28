@@ -35,12 +35,60 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/posts/first-post/index.html": {
+	"/posts/1-percent-better/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/posts/first-post/index.html",
+		"oAP": "/posts/1-percent-better/index.html",
+		"oF": 0
+		},
+	"/posts/a-caveat-to-consumption-spirals/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/a-caveat-to-consumption-spirals/index.html",
+		"oF": 0
+		},
+	"/posts/analytics-vs-surveys/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/analytics-vs-surveys/index.html",
+		"oF": 0
+		},
+	"/posts/could-unmanageable-scale-create-a-more-sustainable-business/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/could-unmanageable-scale-create-a-more-sustainable-business/index.html",
+		"oF": 0
+		},
+	"/posts/custom-wordpress-to-statamic-migration/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/custom-wordpress-to-statamic-migration/index.html",
+		"oF": 0
+		},
+	"/posts/going-it-alone/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/going-it-alone/index.html",
+		"oF": 0
+		},
+	"/posts/google-analytics/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/google-analytics/index.html",
 		"oF": 0
 		},
 	"/posts/index.html": {
@@ -49,6 +97,46 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/posts/index.html",
+		"oF": 0
+		},
+	"/posts/serverless/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/serverless/index.html",
+		"oF": 0
+		},
+	"/posts/statamic-membership-site-continued/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/statamic-membership-site-continued/index.html",
+		"oF": 0
+		},
+	"/posts/statamic-membership-site/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/statamic-membership-site/index.html",
+		"oF": 0
+		},
+	"/posts/tachyons/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/tachyons/index.html",
+		"oF": 0
+		},
+	"/posts/thoughts-on-things/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/posts/thoughts-on-things/index.html",
 		"oF": 0
 		},
 	"/sitemap.xml": {
@@ -77,36 +165,28 @@
 		"oAP": "/tags/index.html",
 		"oF": 0
 		},
-	"/tags/publish/index.html": {
+	"/tags/scripting/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/tags/publish/index.html",
+		"oAP": "/tags/scripting/index.html",
 		"oF": 0
 		},
-	"/tags/static-site/index.html": {
+	"/tags/statamic/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/tags/static-site/index.html",
+		"oAP": "/tags/statamic/index.html",
 		"oF": 0
 		},
-	"/tags/sundell/index.html": {
+	"/tags/wordpress/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/tags/sundell/index.html",
-		"oF": 0
-		},
-	"/tags/swift/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/tags/swift/index.html",
+		"oAP": "/tags/wordpress/index.html",
 		"oF": 0
 		}
 	},
