@@ -6,7 +6,7 @@ tags: statamic
 
 # Private content with Statamic
 
-After my [tutorial](https://www.jamiedumont.co.uk/blog/statamic-membership-site/) a couple of weeks ago about building a membership site with [Statamic](https://statamic.com), which only focussed on how to protect content from non-users, making no distinction between the different “types” of users possible, I’ve since had a few questions about how to build out the rest of the site. Most were related to the templating, and how you’d add more specific restrictions around the content; so here’s a few patterns that I’ve found useful when building membership sites with Statamic.
+After my [tutorial](https://www.jamiedumont.co.uk/posts/statamic-membership-site/) a couple of weeks ago about building a membership site with [Statamic](https://statamic.com), which only focussed on how to protect content from non-users, making no distinction between the different “types” of users possible, I’ve since had a few questions about how to build out the rest of the site. Most were related to the templating, and how you’d add more specific restrictions around the content; so here’s a few patterns that I’ve found useful when building membership sites with Statamic.
 
 ## Navigation
 One of the first things you’ll want to do is display a different menu or navigation depending on whether a user is logged in or not. Where they are logged out, you obviously will want to provide them links to login or register. If they’re logged in then a link to their dashboard, protected content or a “Log out” button would be a better use of the same space.
@@ -44,7 +44,7 @@ The most common question I was asked was how to distinguish between different ty
 
 Luckily, Statamic & Charge have an easy to implement solution. We already know about Statamics Roles, which can be used in the templates to control rendering of content. Charge has the ability to automatically assign users to a Role when they subscribe with a particular Stripe plan.
 
-We’ve set up a Role for our members last time, so head back to that [tutorial](https://www.jamiedumont.co.uk/blog/build-a-membership-site-with-statamic/) if you can’t remember how. For assigning Roles to Stripe plans, head to Configure > Addons in the Control Panel, and then open the Charge settings page from the three dots drop-down on the right hand side. There you can configure how Stripe pans will map to Statamic Roles. Here’s an example:
+We’ve set up a Role for our members last time, so head back to that [tutorial](https://www.jamiedumont.co.uk/posts/build-a-membership-site-with-statamic/) if you can’t remember how. For assigning Roles to Stripe plans, head to Configure > Addons in the Control Panel, and then open the Charge settings page from the three dots drop-down on the right hand side. There you can configure how Stripe pans will map to Statamic Roles. Here’s an example:
 
 ![Mapping Stripe plans to Roles in the Statamic Control Panel with Charge](/images/membership-site/stripe-plan-roles.png)
 
