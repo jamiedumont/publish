@@ -181,7 +181,7 @@ private extension Node where Context == HTML.BodyContext {
 
         return .header(
             .div(
-//                .a(.class("site-name"), .href("/"), .text(context.site.name)),
+                .a(.class("site-name"), .href("/"), .text("Jamie Dumont")),
                 .if(sectionIDs.count > 1,
                     .nav(
                         .ul(.forEach(sectionIDs) { section in

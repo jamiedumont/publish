@@ -223,4 +223,12 @@ code {
     display: block;
 }
 
+.site-name {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-dark);
+    margin: .75rem 0;
+    display: block;
+}
+
 
