@@ -9,7 +9,7 @@
     --color-accent-darker: #DFB212;
     
     --border-thin: 1px silver;
-    --border-thick 2px solid silver;
+    --border-thick: 2px solid silver;
     
     --measure: 72ch;
 }
@@ -229,6 +229,45 @@ code {
     color: var(--color-dark);
     margin: .75rem 0;
     display: block;
+}
+
+.hidden {
+    display: none;
+}
+.post-preview {
+    margin-bottom: 3rem;
+}
+.post-preview__title {
+    font-size: 1.2rem;
+}
+
+.arrow-link {
+    color: var(--color-light);
+    display: inline-flex;
+    align-items: center;
+    padding: .35rem .5rem;
+    background-color: var(--color-dark);
+    transition: all .35s;
+    font-weight: 600;
+}
+
+.arrow-link:hover {
+    color: var(--color-accent-darker)
+}
+
+.arrow-link span {
+    width: 100%;
+}
+
+.arrow-link svg {
+    color: var(--color-accent);
+    margin-left: .5rem;
+    transition: all .35s;
+}
+
+.arrow-link:hover svg {
+    color: var(--color-accent-darker);
+    margin-left: 1rem;
 }
 
 

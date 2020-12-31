@@ -20,6 +20,7 @@ struct JamieDumont: Website {
     var description = "Web developer turned iOS dev"
     var language: Language { .english }
     var imagePath: Path? { nil }
+    var titleSeparator = "-"
 }
 
 // This will generate your website using the built-in Foundation theme:
