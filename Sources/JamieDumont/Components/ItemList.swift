@@ -14,14 +14,25 @@ struct ItemList<Site: Website>: Component {
     
     var body: Component {
         List(items) { item in
-            Article {
-                H1(
-                    ArrowLink(url: item.path, caption: item.title)
-                ).class("post-preview__title")
-                Paragraph(item.description)
-                ItemTagList(item: item, site: site)
+            Div {
+                
+                if item.sectionID.rawValue == "posts" {
+                    PostPreview(item: item, site: site)
+                }
+                
+                if item.sectionID.rawValue == "photos" {
+                    PhotoPreview(item: item, site: site)
+                }
+            
+//            Article {
+//                H1(
+//                    ArrowLink(url: item.path, caption: item.title)
+//                ).class("post-preview__title")
+//                Paragraph(item.description)
+//                ItemTagList(item: item, site: site)
+//            }
+//            .class("post-preview")
             }
-            .class("post-preview")
         }
         .class("item-list")
         .attribute(named: "role", value: "list")

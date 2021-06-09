@@ -1,9 +1,3 @@
-/**
-*  Publish
-*  Copyright (c) John Sundell 2019
-*  MIT license, see LICENSE file for details
-*/
-
 import Plot
 import Publish
 
@@ -24,9 +18,9 @@ private struct JamieDumontHTMLFactory<Site: Website>: HTMLFactory {
             .body {
                 PageWrapper {
                     SiteHeader(context: context, selectedSectionID: nil)
-                    Paragraph(index.body)
+                    Div(index.body).class("mb-2")
                     Div {
-                        H2("Recent Posts")
+                        H2("Recently")
                         ItemList(
                             items: context.allItems(
                                 sortedBy: \.date,
@@ -51,7 +45,7 @@ private struct JamieDumontHTMLFactory<Site: Website>: HTMLFactory {
                     SiteHeader(context: context, selectedSectionID: section.id)
                     
                     Div {
-                        H2(section.title)
+                        H2("All \(section.title)")
                         ItemList(
                             items: section.items,
                             site: context.site
@@ -92,6 +86,7 @@ private struct JamieDumontHTMLFactory<Site: Website>: HTMLFactory {
             .body {
                 PageWrapper {
                     SiteHeader(context: context, selectedSectionID: nil)
+                    Div(page.content.body)
                     SiteFooter()
                 }
             }

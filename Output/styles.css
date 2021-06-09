@@ -59,6 +59,7 @@ body {
   background-color: var(--color-light);
   color: var(--color-dark);
   font-family: -apple-system, sans-serif;
+  padding: 1rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -224,11 +225,36 @@ code {
 }
 
 .site-name {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 900;
     color: var(--color-dark);
-    margin: .75rem 0;
+/*    margin: .75rem 0;*/
     display: block;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.site-navigation ul {
+    margin: 0;
+}
+
+.site-navigation li {
+    list-style: none;
+    margin-right: 1.7rem;
+    display: inline-block;
+}
+
+.site-navigation li:last-child {
+    margin-right: 0;
+}
+
+.site-navigation a.selected {
+    color: var(--color-accent-darker);
 }
 
 .hidden {
@@ -268,6 +294,10 @@ code {
 .arrow-link:hover svg {
     color: var(--color-accent-darker);
     margin-left: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
 }
 
 

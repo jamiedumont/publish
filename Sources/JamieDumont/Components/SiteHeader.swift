@@ -19,7 +19,7 @@ struct SiteHeader<Site: Website>: Component {
             if Site.SectionID.allCases.count > 1 {
                 navigation
             }
-        }
+        }.class("site-header")
     }
     
     private var navigation: Component {
@@ -31,6 +31,6 @@ struct SiteHeader<Site: Website>: Component {
                             url: section.path.absoluteString
                 ).class(sectionID == selectedSectionID ? "selected" : "")
             }
-        }
+        }.class("site-navigation")
     }
 }
