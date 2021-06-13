@@ -52,7 +52,7 @@ extension Plugin {
     }
 }
 
-private extension File {
+extension File {
     private static let imageFileExtensions: Set<String> = [
         "jpg", "jpeg"
     ]

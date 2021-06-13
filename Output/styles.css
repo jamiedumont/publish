@@ -267,6 +267,12 @@ code {
     font-size: 1.2rem;
 }
 
+.post-preview__date {
+    margin: .5rem 0;
+    font-weight: 400;
+    color: silver;
+}
+
 .arrow-link {
     color: var(--color-light);
     display: inline-flex;

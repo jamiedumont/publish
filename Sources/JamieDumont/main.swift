@@ -8,6 +8,11 @@ import LocalWebsitePublishPlugin
 //import MagickPublishPlugin
 //import JamieDumontPublishTheme
 
+struct PhotoOption {
+    var width: Int
+    var format: String
+}
+
 // This type acts as the configuration for your website.
 struct JamieDumont: Website {
     enum SectionID: String, WebsiteSectionID {
@@ -27,12 +32,14 @@ struct JamieDumont: Website {
         var photo: PhotoInfo?
 //        var photos: [Photo]?
     }
+    
+    
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://jamiedumont.co.uk")!
+    var url = URL(string: "https://www.jamiedumont.co.uk")!
     var name = "Jamie Dumont"
     var description = "Web developer turned iOS dev"
-    var language: Language { .english }
+    var language: Language { .ukEnglish }
     var imagePath: Path? { nil }
     var titleSeparator = "-"
 }
@@ -43,10 +50,16 @@ try JamieDumont().publish(using: [
 //    .installPlugin(.addPageBundles()),
     .copyResources(),
     .installPlugin(.addAdjacentImages()),
-    .installPlugin(.verifyResourcesExist()),
+//    .installPlugin(.optimisePhotos(path: "Resources/Photos", options : [
+//        PhotoOption(width: 400, format: "jpeg"),
+//        PhotoOption(width: 800, format: "jpeg")
+//    ])),
+    //.installPlugin(.optimizeForWeb(imagesInFolder: "Output/Photos/")),
+    
 //    .installPlugin(.plotPage()),
     .generateHTML(withTheme: .jamiedumont),
     .installPlugin(.localifyHTML()),
+    //.installPlugin(.verifyResourcesExist()),
     .generateRSSFeed(including: [.photos, .posts]),
     .generateSiteMap()
 ])
@@ -129,6 +142,27 @@ public extension Plugin {
 //            try PageBundler().from(folder, to: &context)
 //        }
 //    }
+    
+    internal static func optimisePhotos(path: Path = "Resources/Photos", options: [PhotoOption]) -> Self {
+        Plugin(name: "Optimise Photos") { context in
+            let contentRoot = try context.folder(at: path)
+            for file in contentRoot.files.recursive {
+                guard file.isImage else { continue }
+                let fileName = file.nameExcludingExtension
+                guard let parentPath = file.parent?.path else { continue }
+                let undscr = "_"
+                let dot = "."
+                
+                for version in options {
+                    var possibleVersionPathString: String = parentPath + fileName + undscr + String(version.width) + dot + version.format
+                    //var possibleVersionPath = parentPath + fileName + "_" + version.width + "." + version.format
+                    
+                    let possibleVersion = try File(path: possibleVersionPathString)
+                    print(possibleVersion.name)
+                }
+            }
+        }
+    }
     
     static func markdownEdit() -> Self {
         Plugin(name: "Markdown Edit") { context in
